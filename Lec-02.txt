@@ -1,0 +1,60 @@
+-- Show all available databases
+SHOW DATABASES;
+-- Lists all databases in the system
+
+-- Select a specific database to work with
+USE database_name;
+-- Switches to the specified database
+
+-- Get the current database name
+SELECT DATABASE();
+-- Returns the name of the database you are currently using
+
+-- Delete (drop) a database
+DROP DATABASE database_name;
+-- Permanently deletes the database and all its tables (Use with caution!)
+
+-- Create a new database
+CREATE DATABASE database_name;
+-- Creates a new database with the specified name
+
+-- Show all tables in the current database
+SHOW TABLES;
+-- Lists all tables within the selected database
+
+-- Describe table structure
+DESC table_name;
+-- Displays the structure of the specified table
+
+-- Create a table inside the selected database
+CREATE TABLE table_name (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    age INT,
+    salary DECIMAL(10,2)
+);
+-- Creates a table with four columns: id (auto-incremented primary key), name, age, and salary
+
+-- Insert data into a table
+INSERT INTO table_name (name, age, salary) VALUES ('John Doe', 30, 50000.00);
+-- Adds a new record to the table
+
+-- Retrieve all data from a table
+SELECT * FROM table_name;
+-- Fetches all records from the specified table
+
+-- Retrieve specific columns from a table
+SELECT name, age FROM table_name;
+-- Fetches only the name and age columns from the specified table
+
+-- Update records in a table
+UPDATE table_name SET salary = 60000.00 WHERE name = 'John Doe';
+-- Updates the salary of John Doe to 60000.00
+
+-- Delete records from a table
+DELETE FROM table_name WHERE name = 'John Doe';
+-- Removes the record where name is John Doe
+
+-- Drop a table
+DROP TABLE table_name;
+

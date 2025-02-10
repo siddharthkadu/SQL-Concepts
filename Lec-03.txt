@@ -1,0 +1,94 @@
+CRUD stands for Create, Read, Update, and Delete, which are the four basic operations that can be performed on a database.
+
+1.) Create (INSERT Statement)
+Used to add new records to a table.
+
+2.) Read (SELECT Statement)
+Used to retrieve existing records from a table.
+
+3.) Update (UPDATE Statement)
+Used to modify existing records in a table.
+
+4.) Delete (DELETE Statement)
+Used to remove records from a table.
+
+(A) Creation of Table and INSERT Statements
+
+Employee Table
+(Assumption: You prefer to hire employees from Bangalore by default)
+
+
+CREATE TABLE employee (
+    firstname VARCHAR(50) NOT NULL,
+    middlename VARCHAR(50),
+    lastname VARCHAR(50),
+    age INT,
+    salary INT,
+    location VARCHAR(50) DEFAULT 'Bangalore'
+);
+
+
+(B) Inserting Values into Employee Table
+
+
+INSERT INTO employee (firstname, middlename, lastname, age, salary, location)
+VALUES ('Siddharth', 'Dinesh', 'Kadu', 24, 10000000, 'Pune');
+
+
+
+(C) Primary Key Concept
+
+A Primary Key is a unique identifier for each record in a table. It ensures that each row has a unique value and cannot be NULL.
+
+Creating a Table with Primary Key
+
+CREATE TABLE employee (
+    id INT NOT NULL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    age INT NOT NULL
+);
+
+Alternative Syntax
+
+CREATE TABLE employee (
+    id INT NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    age INT NOT NULL,
+    PRIMARY KEY(id)
+);
+
+Inserting Data into Table with Primary Key
+
+
+INSERT INTO employee (id, name, age) VALUES (1, 'Siddharth', 24);
+
+
+(D) Auto Increment Concept
+
+AUTO_INCREMENT ensures that each new row gets a unique, automatically incrementing value for the primary key column.
+
+Creating a Table with Auto-Increment Primary Key
+
+CREATE TABLE employee (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    age INT NOT NULL
+);
+
+
+(E) Unique Key Concept
+
+A Unique Key ensures that a column has unique values across all rows. Unlike a primary key, it can contain NULL values.
+
+Example of Unique Key Constraint
+
+
+CREATE TABLE employee (
+    id INT NOT NULL PRIMARY KEY,
+    email VARCHAR(100) UNIQUE,
+    name VARCHAR(50) NOT NULL,
+    age INT NOT NULL
+);
+
+Primary Key: Can only be one per table, must be unique, and cannot be NULL.
+Unique Key: Can have multiple unique keys in a table and allows NULL values.

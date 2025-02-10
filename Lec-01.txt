@@ -1,0 +1,30 @@
+Lec-01
+
+1)What is a database?
+
+-A database is an organized collection of structured or unstructured data that allows efficient storage, retrieval, and management. It can store data in various formats, such as tables (Relational Databases) or documents, key-value pairs, and graphs (NoSQL Databases).
+
+2)What is a table?
+
+-A table holds data in the form of rows and columns.
+(It is similar to an Excel spreadsheet.)
+
+3)Why do we use a database to store data instead of an Excel spreadsheet?
+
+-A database provides the capability to efficiently access, store, and manipulate data.
+
+Types of databases:
+
+1. Relational Database
+
+Stores data in rows and columns, and tables have relationships between them.
+Examples: MySQL, SQL Server, PostgreSQL, SQLite, MariaDB
+
+
+2. NoSQL Database
+
+Stores data in key-value pairs, documents, or graph structures.
+Examples: HBase, MongoDB, Cassandra
+SQL (Structured Query Language)
+
+MySQL is a database, and we use SQL to interact with it.

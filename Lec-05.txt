@@ -1,0 +1,7 @@
+foreign key
+
+-A foreign key is a field in one table that establishes a relationship with another table by referencing the primary key of that table.
+
+The table that contains the primary key is called the parent table.
+
+The table that contains the foreign key is called the child table.

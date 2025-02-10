@@ -1,0 +1,60 @@
+
+1)UPDATE-The UPDATE statement is used to modify existing records in a table.
+
+UPDATE employee set name='mahesh' where id=1
+
+
+2)DELETE -The DELETE statement is used to remove records from a table.
+
+DELETE from employee where id=1; 
+
+DELETE from employee;(delete all column )
+
+
+3)ALTER 
+
+The ALTER statement is used to modify the schema (structure) of an existing table.
+
+Alter Table employee add column jobtiltle varchar(50) not null;  --> add column
+
+ALTER table employee drop column jobtilte      ---> drop column
+
+ALTER table employee modify column name varchar(60)----> modify column
+
+ALTER table employee drop primary key-----> drop primary key
+
+ALTER table emloyee add primary key(id)-----> add primary key
+
+
+
+DDL vs DML in SQL
+1. Data Definition Language (DDL)
+
+DDL is used to define, modify, or delete the structure of database objects such as tables, indexes, and schemas. It does not manipulate the actual data within the tables.
+
+Examples of DDL Commands:
+CREATE → Creates a new table, database, or index.
+
+ALTER → Modifies the structure of an existing table (e.g., adding or removing columns).
+
+DROP → Deletes an entire table or database permanently.
+
+TRUNCATE → Removes all records from a table but retains its structure.
+
+Note on TRUNCATE:
+
+TRUNCATE internally drops and recreates the table.
+It is faster than DELETE because it does not log individual row deletions.
+It cannot be rolled back as it is auto-committed.
+
+2. Data Manipulation Language (DML)
+
+DML is used to manipulate the actual data inside database tables. It allows users to insert, update, or delete records while keeping the table structure unchanged.
+
+Examples of DML Commands:
+
+INSERT → Adds new records to a table.
+UPDATE → Modifies existing records in a table.
+DELETE → Removes specific records from a table while keeping its structure intact.
+
+DML commands can be rolled back, unlike most DDL commands, making them transaction-safe.
